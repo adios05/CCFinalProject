@@ -44,7 +44,7 @@ function draw() {
       imageMode(CENTER);
       image(backgroundImage, width / 2, height / 2);
 
-      // Update and display UFO and Rocket
+      
       ufo.update();
       ufo.display();
 
@@ -56,10 +56,10 @@ function draw() {
 
       // Check if score reaches 50
       if (score >= 50) {
-        state = 5; // Transition to final state
+        state = 5; 
       }
 
-      // Draw cursor
+      
       drawCursor();
       break;
 
@@ -87,7 +87,7 @@ function keyPressed() {
 }
 
 function mousePressed() {
-  // Allow clicking only during gameplay
+  
   if (state === 4) {
     ufo.clicked(mouseX, mouseY);
     rocket.clicked(mouseX, mouseY);
